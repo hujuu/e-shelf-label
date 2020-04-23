@@ -30,8 +30,8 @@ try:
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
 
     logging.info("3.read bmp file")
-    HBlackimage = Image.open(os.path.join(picdir, '2in13_ad_price.bmp'))
-    HRYimage = Image.open(os.path.join(picdir, '2in13_ad_price_ry.bmp'))
+    HBlackimage = Image.open(os.path.join(picdir, '213_ad_tag-b.bmp'))
+    HRYimage = Image.open(os.path.join(picdir, '213_ad_tag-ry.bmp'))
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
     time.sleep(2)
     

@@ -23,7 +23,7 @@ try:
     epd.init()
     epd.Clear()
     time.sleep(1)
-    
+
     # Drawing on the image
     logging.info("Drawing")    
     font20 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 20)
@@ -37,7 +37,8 @@ try:
 
     logging.info("3.read bmp file")
     HBlackimage = Image.open(os.path.join(picdir, '2in13_ad_price.bmp'))
-    epd.display(epd.getbuffer(HBlackimage))
+    HRYimage = Image.open(os.path.join(picdir, '2in13_ad_price_ry.bmp'))
+    epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
     time.sleep(2)
     
     logging.info("Clear...")

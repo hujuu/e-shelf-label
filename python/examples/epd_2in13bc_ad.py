@@ -29,25 +29,6 @@ try:
     font20 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 20)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
     
-    # Drawing on the Vertical image
-    logging.info("2.Drawing on the Vertical image...")
-    LBlackimage = Image.new('1', (epd.width, epd.height), 255)  # 126*298
-    LRYimage = Image.new('1', (epd.width, epd.height), 255)  # 126*298
-    drawblack = ImageDraw.Draw(LBlackimage)
-    drawry = ImageDraw.Draw(LRYimage)
-    
-    drawblack.text((2, 0), 'hello world', font = font18, fill = 0)
-    drawblack.text((2, 20), '2.13 epd b', font = font18, fill = 0)
-    drawblack.text((20, 50), u'微雪电子', font = font18, fill = 0)
-    drawblack.line((10, 90, 60, 140), fill = 0)
-    drawblack.line((60, 90, 10, 140), fill = 0)
-    drawblack.rectangle((10, 90, 60, 140), outline = 0)
-    drawry.rectangle((10, 150, 60, 200), fill = 0)
-    drawry.arc((15, 95, 55, 135), 0, 360, fill = 0)
-    drawry.chord((15, 155, 55, 195), 0, 360, fill =1)
-    epd.display(epd.getbuffer(LBlackimage), epd.getbuffer(LRYimage))
-    time.sleep(2)
-    
     logging.info("3.read bmp file")
     HBlackimage = Image.open(os.path.join(picdir, '2in13bc-b.bmp'))
     HRYimage = Image.open(os.path.join(picdir, '2in13bc-ry.bmp'))

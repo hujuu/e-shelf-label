@@ -28,12 +28,6 @@ try:
     logging.info("Drawing")    
     font20 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 20)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
-    
-    logging.info("3.read bmp file")
-    HBlackimage = Image.open(os.path.join(picdir, '2in13bc-b.bmp'))
-    HRYimage = Image.open(os.path.join(picdir, '2in13bc-ry.bmp'))
-    epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
-    time.sleep(2)
 
     logging.info("3.read bmp file")
     HBlackimage = Image.open(os.path.join(picdir, '2in13_ad_price.bmp'))
@@ -42,8 +36,8 @@ try:
     time.sleep(2)
     
     logging.info("Clear...")
-    epd.init()
-    epd.Clear()
+    # epd.init()
+    # epd.Clear()
     
     logging.info("Goto Sleep...")
     epd.sleep()

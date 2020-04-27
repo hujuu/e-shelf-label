@@ -43,10 +43,11 @@ try:
 
     drawblack = ImageDraw.Draw(HBlackimage)
     drawry = ImageDraw.Draw(HRYimage)
-    drawblack.text((100, 5), u'天然本マグロ', font=font20, fill=0)
+    drawblack.text((95, 5), u'天然本マグロ', font=font20, fill=0)
     drawry.text((100, 30), u'¥10,000', font=font25, fill=0)
     drawblack.text((100, 60), u'税込価格  ¥10,800', font=font12, fill=0)
     drawblack.text((100, 75), u'100g当たり ¥2,000', font=font12, fill=0)
+    drawry.text((0, 85), u'▲▲ サンプリングキャンペーン実施中', font=font25, fill=0)
     # drawry.line((165, 50, 165, 100), fill=0)
     # drawry.line((140, 75, 190, 75), fill=0)
     # drawry.arc((140, 50, 190, 100), 0, 360, fill=0)

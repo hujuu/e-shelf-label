@@ -30,6 +30,7 @@ try:
     font25 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 25)
     font20 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 20)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
+    font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
 
     # Drawing on the Horizontal image
     logging.info("1.Drawing on the Horizontal image...")
@@ -43,10 +44,10 @@ try:
     drawry = ImageDraw.Draw(HRYimage)
     # drawblack.text((10, 0), 'hello world', font=font20, fill=0)
     # drawblack.text((10, 20), '2.13inch e-Paper bc', font=font20, fill=0)
-    drawblack.text((120, 0), u'天然本マグロ', font=font20, fill=0)
-    drawblack.text((120, 20), u'¥10,000', font=font25, fill=0)
-    drawblack.text((120, 45), u'税込価格    ¥10,800', font=font18, fill=0)
-    drawblack.text((120, 63), u'100g当たり   ¥2,000', font=font18, fill=0)
+    drawblack.text((110, 5), u'天然本マグロ', font=font20, fill=0)
+    drawblack.text((110, 30), u'¥10,000', font=font25, fill=0)
+    drawblack.text((110, 60), u'税込価格  ¥10,800', font=font15, fill=0)
+    drawblack.text((110, 75), u'100g当たり ¥2,000', font=font15, fill=0)
     # drawry.line((165, 50, 165, 100), fill=0)
     # drawry.line((140, 75, 190, 75), fill=0)
     # drawry.arc((140, 50, 190, 100), 0, 360, fill=0)

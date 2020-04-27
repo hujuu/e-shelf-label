@@ -31,6 +31,7 @@ try:
     font20 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 20)
     font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
     font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
+    font13 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 13)
     font12 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 12)
 
     # Drawing on the Horizontal image
@@ -47,7 +48,7 @@ try:
     drawry.text((100, 30), u'¥10,000', font=font25, fill=0)
     drawblack.text((100, 60), u'税込価格  ¥10,800', font=font12, fill=0)
     drawblack.text((100, 75), u'100g当たり ¥2,000', font=font12, fill=0)
-    drawry.text((0, 85), u'▲▲ サンプリングキャンペーン実施中', font=font25, fill=0)
+    drawry.text((0, 85), u'▲▲ サンプリングキャンペーン実施中', font=font13, fill=0)
     # drawry.line((165, 50, 165, 100), fill=0)
     # drawry.line((140, 75, 190, 75), fill=0)
     # drawry.arc((140, 50, 190, 100), 0, 360, fill=0)

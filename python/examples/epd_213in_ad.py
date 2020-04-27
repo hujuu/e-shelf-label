@@ -37,7 +37,7 @@ try:
     HBlackimage = Image.new('1', (epd.height, epd.width), 255)  # 298*126
     HRYimage = Image.new('1', (epd.height, epd.width), 255)  # 298*126  ryimage: red or yellow image
 
-    newimage = Image.open(os.path.join(picdir, 'qrcode.bmp'))
+    newimage = Image.open(os.path.join(picdir, 'qrcode420.bmp'))
     HBlackimage.paste(newimage, (0, 0))
 
     drawblack = ImageDraw.Draw(HBlackimage)

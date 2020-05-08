@@ -1,6 +1,4 @@
-﻿# e-Paper  
-waveshare electronics
-![waveshare_logo.png](waveshare_logo.png)
+﻿# e-Paper 
 
 ## 中文:  
 Jetson Nano、Raspberry Pi、Arduino、STM32例程

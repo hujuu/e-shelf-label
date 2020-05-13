@@ -55,13 +55,22 @@ try:
 
     time.sleep(20)
 
+    # Drawing on the Horizontal image
+    logging.info("1.Drawing on the Horizontal image...")
+    HBlackimage = Image.new('1', (epd.height, epd.width), 255)  # 298*126
+    HRYimage = Image.new('1', (epd.height, epd.width), 255)  # 298*126  ryimage: red or yellow image
+
+    newimage = Image.open(os.path.join(picdir, 'qrcode325.bmp'))
+    HBlackimage.paste(newimage, (0, 0))
     drawblack = ImageDraw.Draw(HBlackimage)
     drawry = ImageDraw.Draw(HRYimage)
+
     drawblack.text((95, 5), u'天然本マグロ', font=font20, fill=0)
     drawry.text((100, 30), u'¥5,000', font=font25, fill=0)
     drawblack.text((100, 60), u'税込価格  ¥10,800', font=font12, fill=0)
     drawblack.text((100, 74), u'100g当たり ¥2,000', font=font12, fill=0)
     drawry.text((0, 87), u'今だけ、半額キャンペーン！', font=font13, fill=0)
+
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
 
 
